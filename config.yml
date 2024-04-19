@@ -1,0 +1,10 @@
+version: 2.1
+
+jobs:
+  build_and_test:
+    docker:
+      - image: zodinx/zezemi:latest
+    steps:
+      - run:
+          name: Run the zodinx/zezemi application
+          command: ["docker-compose", "up", "-d"]
